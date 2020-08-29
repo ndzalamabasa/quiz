@@ -70,8 +70,10 @@ function showProgress() {
 }
 
 function showScores() {
+    
+
     var gameOverHTML = "<h1>Results</h1>";
-    gameOverHTML += "<h2 id='score'> Your score: " + quiz.score+"</h2>";
+        gameOverHTML += "<h2 id='score'> Your score: " + quiz.score+"/"+quiz.questions.length+"</h2>";
     gameOverHTML += "<h3 id='next'> Next Quiz </h3>";
 
     var element = document.querySelector(".result");
@@ -95,6 +97,7 @@ function showScores() {
             topic.innerHTML = "Know Your Game";
             element.classList.toggle("show-results");
             page.style.opacity = 1;
+            page.classList.toggle('politics');
             quiz = new Quiz(questions);
             populate();
         }
