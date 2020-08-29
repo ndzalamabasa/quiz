@@ -71,24 +71,31 @@ function showProgress() {
 
 function showScores() {
     
-
-    var gameOverHTML = "<h1>Results</h1>";
-        gameOverHTML += "<h2 id='score'> Your score: " + quiz.score+"/"+quiz.questions.length+"</h2>";
-    gameOverHTML += "<h3 id='next'> Next Quiz </h3>";
-
     var element = document.querySelector(".result");
     const page = document.getElementById("quiz");
-    page.style.opacity = 0;
+
+    var gameOverHTML = "<h1>Results</h1>";
+    gameOverHTML += "<h2 id='score'> Your score: " + quiz.score + "/" + quiz.questions.length + "</h2>";
+    if (page.className=="") {
+        gameOverHTML += "<button id='next'> Next Quiz </button>";
+    }
+    else {
+        gameOverHTML += "<button id='next'> Previous Quiz </button>";
+    }
+    
+    const window = document.querySelector(".grid");
+    window.style.display = "none";
     element.classList.toggle("show-results");
     element.innerHTML = gameOverHTML;
 
     const nextQuiz = document.getElementById("next");
     nextQuiz.onclick = () => {
-        if (page.className=="") {
+        if (page.className == "") {
+            
             element.classList.toggle("show-results");
             const topic = document.getElementById("topic");
-            topic.innerHTML = "South African Politics";
-            page.style.opacity = 1;
+            topic.innerHTML = "South African History and Politics";
+            window.style.display = "block";
             page.classList.toggle('politics');
             quiz = new Quiz(politics);
             populate();
@@ -96,7 +103,7 @@ function showScores() {
         else {
             topic.innerHTML = "Know Your Game";
             element.classList.toggle("show-results");
-            page.style.opacity = 1;
+            window.style.display = "block";
             page.classList.toggle('politics');
             quiz = new Quiz(questions);
             populate();
