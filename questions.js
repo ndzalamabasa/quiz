@@ -92,7 +92,7 @@ function showScores() {
             populate();
         }
         else {
-            topic.innerHTML = "Web Development Quiz";
+            topic.innerHTML = "Know Your Game";
             element.classList.toggle("show-results");
             page.style.opacity = 1;
             quiz = new Quiz(questions);
@@ -102,17 +102,17 @@ function showScores() {
 }
 
 const questions = [
-    new Question("Hyper Text Markup Language Stand For?", ["JavaScript", "XHTML","CSS", "HTML"], "HTML"),
-    new Question("Which language is used for styling web pages?", ["HTML", "JQuery", "CSS", "XML"], "CSS"),
-    new Question("Which is not a JavaScript Framework?", ["Python Script", "JQuery","Django", "NodeJS"], "Django"),
-    new Question("Which is used for Connect To Database?", ["PHP", "HTML", "JS", "All"], "PHP"),
-    new Question("What language is used in relational databases?", ["JavaScript", "Nodejs", "SQL", "All"], "SQL")
+    new Question("Number of PSL Teams", ["20", "16","15", "10"], "16"),
+    new Question("PSL all time leading goal scorer", ["Collins Mbesuma", "Siyabonga Nomvete", "Samir Nurkovic", "Benedict Vilakazi"], "Siyabonga Nomvete"),
+    new Question("1991?", ["2000", "1970","1990", "1996"], "1996"),
+    new Question("Team with Most PSL League titles?", ["Kaizer Chiefs", "Mamelodi Sundowns", "moroka Swallows", "Orlando Pirates"], "Mamelodi Sundowns"),
+    new Question("First Soweto derby match was on the", ["2 February 1996", "10 june 1990", "13 December 1968", "24 January 1970"], "24 January 1970")
 ];
 
 const politics = [
     new Question("South African first Black President", ["Thabo Mbeki", "Nelson Mandela","De Clerk", "Jacob Zuma"], "Nelson Mandela"),
     new Question("South African Freedom Day is celebrated on the", ["27th April", "16th June", "21st March", "9th August"], "27th April"),
-    new Question("Who was not a Revonia Trialist?", ["Nelson Mandela", "Andrew Mlangeni","Mahhumed Cathrada", "Desmond Tutu"], "Desmond Tutu"),
+    new Question("Who was not a Revonia Trialist?", ["Nelson Mandela", "Andrew Mlangeni","Mohamed Kathrada", "Desmond Tutu"], "Desmond Tutu"),
     new Question("Current Minister of Sports", ["Nathi Mthethwa", "Fikile Mbalula", "Mbuyiseni Ndlozi", "Patricia Deliel"], "Nathi Mthethwa"),
     new Question("ACDP Leader", ["Mbazima Shilowa", "Kenneth Meshoe", "Herman Mashaba", "Trevor Mannuel"], "Kenneth Meshoe")
 ];
