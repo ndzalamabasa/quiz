@@ -102,11 +102,11 @@ function showScores() {
 }
 
 const questions = [
-    new Question("Number of PSL Teams", ["20", "16","15", "10"], "16"),
+    new Question("Number of Teams in the PSL", ["20", "16","15", "10"], "16"),
     new Question("PSL all time leading goal scorer", ["Collins Mbesuma", "Siyabonga Nomvete", "Samir Nurkovic", "Benedict Vilakazi"], "Siyabonga Nomvete"),
-    new Question("1991?", ["2000", "1970","1990", "1996"], "1996"),
-    new Question("Team with Most PSL League titles?", ["Kaizer Chiefs", "Mamelodi Sundowns", "moroka Swallows", "Orlando Pirates"], "Mamelodi Sundowns"),
-    new Question("First Soweto derby match was on the", ["2 February 1996", "10 june 1990", "13 December 1968", "24 January 1970"], "24 January 1970")
+    new Question("When was PSL Established?", ["2000", "1970","1990", "1996"], "1996"),
+    new Question("Team with Most PSL League titles", ["Kaizer Chiefs", "Mamelodi Sundowns", "moroka Swallows", "Orlando Pirates"], "Mamelodi Sundowns"),
+    new Question("First Soweto derby match was on the...", ["2 February 1996", "10 june 1990", "13 December 1968", "24 January 1970"], "24 January 1970")
 ];
 
 const politics = [
