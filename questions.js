@@ -52,9 +52,14 @@ function populate() {
 
 function guess(id,guess) {
     var button = document.getElementById(id);
-    button.onclick= ()=> {
-        quiz.guess(guess);
-        populate();
+    button.onclick = () => {
+        if (quiz.getQuestionIndex().text === null) {
+            showScores();
+        }
+        else {
+            quiz.guess(guess);
+            populate();
+        }
     };
 }
 
@@ -65,10 +70,35 @@ function showProgress() {
 }
 
 function showScores() {
-    var gameOverHTML = "<h1>Result</h1>";
-    gameOverHTML += "<h2 id='score'> Your scores: " + quiz.score + "</h2>";
-    var element = document.getElementById("quiz");
+    var gameOverHTML = "<h1>Results</h1>";
+    gameOverHTML += "<h2 id='score'> Your score: " + quiz.score+"</h2>";
+    gameOverHTML += "<h3 id='next'> Next Quiz </h3>";
+
+    var element = document.querySelector(".result");
+    const page = document.getElementById("quiz");
+    page.style.opacity = 0;
+    element.classList.toggle("show-results");
     element.innerHTML = gameOverHTML;
+
+    const nextQuiz = document.getElementById("next");
+    nextQuiz.onclick = () => {
+        if (page.className=="") {
+            element.classList.toggle("show-results");
+            const topic = document.getElementById("topic");
+            topic.innerHTML = "South African Politics";
+            page.style.opacity = 1;
+            page.classList.toggle('politics');
+            quiz = new Quiz(politics);
+            populate();
+        }
+        else {
+            topic.innerHTML = "Web Development Quiz";
+            element.classList.toggle("show-results");
+            page.style.opacity = 1;
+            quiz = new Quiz(questions);
+            populate();
+        }
+    };
 }
 
 const questions = [
@@ -78,5 +108,14 @@ const questions = [
     new Question("Which is used for Connect To Database?", ["PHP", "HTML", "JS", "All"], "PHP"),
     new Question("What language is used in relational databases?", ["JavaScript", "Nodejs", "SQL", "All"], "SQL")
 ];
-const quiz = new Quiz(questions);
+
+const politics = [
+    new Question("South African first Black President", ["Thabo Mbeki", "Nelson Mandela","De Clerk", "Jacob Zuma"], "Nelson Mandela"),
+    new Question("South African Freedom Day is celebrated on the", ["27th April", "16th June", "21st March", "9th August"], "27th April"),
+    new Question("Who was not a Revonia Trialist?", ["Nelson Mandela", "Andrew Mlangeni","Mahhumed Cathrada", "Desmond Tutu"], "Desmond Tutu"),
+    new Question("Current Minister of Sports", ["Nathi Mthethwa", "Fikile Mbalula", "Mbuyiseni Ndlozi", "Patricia Deliel"], "Nathi Mthethwa"),
+    new Question("ACDP Leader", ["Mbazima Shilowa", "Kenneth Meshoe", "Herman Mashaba", "Trevor Mannuel"], "Kenneth Meshoe")
+];
+
+let quiz = new Quiz(questions);
 populate();
