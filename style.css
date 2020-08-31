@@ -38,7 +38,8 @@ a{
  }
  .main-contents{
      width: 90vw;
-     margin: 4.875em auto 1em;
+     margin: 4.875em auto 2em;
+     position: relative;
  }
 
  .main-contents .heading{
@@ -47,6 +48,7 @@ a{
      font-family: 'Lobster', cursive;
  }
  .main-contents .heading h1{
+     text-transform: uppercase;
      margin-bottom: .5em;
      letter-spacing: .2em;
  }
@@ -161,7 +163,13 @@ a{
 } 
 
 footer{
+    position: relative;
     display: flex;
     justify-content: space-around;
-    padding-bottom: .5em;
+    align-content: center;
+    padding: 1em;
+    color: white;
+
+    background: linear-gradient(#042835, #1e586d,#3a7185);
+
 }
