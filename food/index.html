@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <title>Quiz Game</title>
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <ul class="navigation">
+                <li id="home"><a href="/index.html">M-Quiz</a></li>
+                <li><a href="#"><img width="25" height="25" src="/images/menu.ico" alt=""></a></li>
+            </ul>
+        </nav>
+    </header>
+<!--Main window container-->
+    <div class="grid">
+<!--Quiz container-->
+        <div id="quiz">
+<!--Quiz heading-->
+
+    <h1 id="topic">M-Quiz | Soccer</h1>
+   
+<!--Question and buttons container for answers-->
+            <p id="question"></p>
+ 
+            <div class="buttons">
+<!--Buttons cointaining choices to the question-->
+                <button id="btn0"><span id="choice0"></span></button>
+                <button id="btn1"><span id="choice1"></span></button>
+                <button id="btn2"><span id="choice2"></span></button>
+                <button id="btn3"><span id="choice3"></span></button>
+            </div>
+
+            <hr style="margin-top: 50px">
+
+<!--Keeping track of the quiz progress-->
+            <footer>
+                <p id="progress">Question x of y</p>
+            </footer>
+        </div>
+        
+    </div>
+    <div class="result"></div>
+    <script src="/questions.js"></script>
+</body>
+</html>

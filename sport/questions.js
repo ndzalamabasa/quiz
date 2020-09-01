@@ -7,7 +7,7 @@ class Quiz {
     getQuestionIndex() {
         return this.questions[this.questionIndex];
     }
-    guess(answer) {
+    guess(id,answer) {
         if (this.getQuestionIndex().isCorrectAnswer(answer)) {
             this.score++;
         }
@@ -18,8 +18,6 @@ class Quiz {
     }
 }
 
-
-
 class Question {
     constructor(text, choices, answer) {
         this.text = text;
@@ -27,10 +25,9 @@ class Question {
         this.answer = answer;
     }
     isCorrectAnswer(choice) {
-        return this.answer === choice;
+       return this.answer === choice;
     }
 }
-
 
 function populate() {
     if (quiz.isEnded()) {
@@ -57,8 +54,9 @@ function guess(id,guess) {
             showScores();
         }
         else {
-            quiz.guess(guess);
+            quiz.guess(id, guess);
             populate();
+            
         }
     };
 }
@@ -94,14 +92,14 @@ function showScores() {
             
             element.classList.toggle("show-results");
             const topic = document.getElementById("topic");
-            topic.innerHTML = "South African History and Politics";
+            topic.innerHTML = "History";
             window.style.display = "block";
             page.classList.toggle('politics');
             quiz = new Quiz(politics);
             populate();
         }
         else {
-            topic.innerHTML = "Know Your Game";
+            topic.innerHTML = "--------Sport--------";
             element.classList.toggle("show-results");
             window.style.display = "block";
             page.classList.toggle('politics');
