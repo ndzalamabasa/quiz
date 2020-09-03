@@ -74,7 +74,7 @@ function showScores() {
 
     var gameOverHTML = "<h1>Results</h1>";
     gameOverHTML += "<h2 id='score'> Your score: " + quiz.score + "/" + quiz.questions.length + "</h2>";
-    if (page.className=="") {
+    if (page.className=="sport") {
         gameOverHTML += "<button id='next'> Next Quiz </button>";
     }
     else {
