@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <title>Quiz Game</title>
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <ul class="navigation">
+                <li id="home"><a href="/index.html">Edu-Quiz</a></li>
+                <li id="menu"><img width="30" height="30" src="/images/menu.ico" alt=""></li>
+            </ul>
+            <ul class="desktop-nav">
+                <li id="topic-menu">topics
+                    <ul class="desktop-menu">
+                    <li class="goto-topic"><a href="/sport.html">Sport</a></li>
+                    <li class="goto-topic"><a href="">Food</a></li>
+                    <li class="goto-topic"><a href="">Entertianment</a></li>
+                    <li class="goto-topic"><a href="">History</a></li></ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="grid">
+        <div id="quiz">
+            <h1 id="topic">--------Sport--------</h1>
+            <div class="questions-container">
+                <p id="question"></p>
+                <div class="buttons">
+                    <button id="btn0"><span id="choice0"></span></button>
+                    <button id="btn1"><span id="choice1"></span></button>
+                    <button id="btn2"><span id="choice2"></span></button>
+                    <button id="btn3"><span id="choice3"></span></button>
+                </div>
+
+                <footer class="prog">
+                    <p id="progress">Question x of y</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <small>2020&copy;M-Quiz</small>
+        <small>Terms of use | Privacy</small>
+    </footer>
+
+    <div class="result"></div>
+    <script src="/questions.js"></script>
+    <script src="/home.js"></script>
+</body>
+</html>

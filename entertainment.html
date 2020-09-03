@@ -11,19 +11,23 @@
     <header>
         <nav class="nav-bar">
             <ul class="navigation">
-                <li id="home"><a href="/index.html">M-Quiz</a></li>
-                <li><a href="#"><img width="25" height="25" src="/images/menu.ico" alt=""></a></li>
+                <li id="home"><a href="/index.html">Edu-Quiz</a></li>
+                <li id="menu"><img width="30" height="30" src="/images/menu.ico" alt=""></li>
+            </ul>
+            <ul class="desktop-nav">
+                <li id="topic-menu">topics
+                    <ul class="desktop-menu">
+                    <li class="goto-topic"><a href="/sport.html">Sport</a></li>
+                    <li class="goto-topic"><a href="">Food</a></li>
+                    <li class="goto-topic"><a href="/entertainment.html">Entertianment</a></li>
+                    <li class="goto-topic"><a href="/history.html">History</a></li></ul>
+                </li>
             </ul>
         </nav>
     </header>
-<!--Main window container-->
     <div class="grid">
-    <!--Quiz container-->
         <div id="quiz">
-<!--Quiz heading-->
-            <h1 id="topic">--------History--------</h1>
-    
-<!--Question and buttons container for answers-->
+            <h1 id="topic">--------Entertainment--------</h1>
             <div class="questions-container">
                 <p id="question"></p>
                 <div class="buttons">
@@ -37,17 +41,16 @@
                     <p id="progress">Question x of y</p>
                 </footer>
             </div>
-<!--Keeping track of the quiz progress-->
-            
         </div>
-        
     </div>
 
     <footer>
         <small>2020&copy;M-Quiz</small>
         <small>Terms of use | Privacy</small>
     </footer>
+
     <div class="result"></div>
     <script src="/questions.js"></script>
+    <script src="/home.js"></script>
 </body>
 </html>
