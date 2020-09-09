@@ -56,7 +56,6 @@ function guess(id,guess) {
         else {
             quiz.guess(id, guess);
             populate();
-            
         }
     };
 }
